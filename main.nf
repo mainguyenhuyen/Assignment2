@@ -2,7 +2,7 @@
 
 params.cutoff = 50
 
-process filterlength {
+process filterLength {
   input:
     path inputFile
     val cutoff
@@ -22,5 +22,5 @@ process filterlength {
 
 workflow {
  inputFile = Channel.fromPath(params.input)
- filteredData = filterExp(inputFile, params.cutoff)
+ filteredData = filterLength(inputFile, params.cutoff)
 }
